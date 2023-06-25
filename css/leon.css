@@ -1,0 +1,683 @@
+/* Start Variable */
+:root{
+--main-color:#10CAB7;
+--section-padding:60px;
+--section-color:#f6f6f6;
+--secondary-color:#2c4755;
+}
+
+/* End Variable */
+/* start Global Website Rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior:smooth ;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container{
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;   
+}
+    
+/* End Global Website Rules */
+
+/* Start components */
+.special-heading{
+    color:#ebeced ;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading + p{
+    margin: -15px 0px 0px ;
+    font-size: 20px;
+    text-align: center;
+    color:#797979;
+    font-family: 'FontAwesome' , 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+@media(max-width : 767px){
+
+    .special-heading{
+        font-size: 60px;
+    }
+
+    .special-heading + p{
+
+        margin: -5px;
+    }
+
+}
+/* End components */
+
+
+/*........................................................................................................................................................................................................*/
+
+
+/* Start Header */
+
+.header{
+    padding: 20px;
+    height: 80px;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    margin: 0;
+}
+
+.header .links{
+    position: relative;
+}
+
+.header .links .icons{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.header .links:hover .icons{
+    margin-top : 5px;
+    transition: ease-in-out;
+}
+
+.header .links:hover .icons svg{
+font-size: 32px;
+}
+
+.header .links ul{
+    position: absolute;
+    padding-top: 12px;
+    top: 40px;
+    right: -15px;
+    min-width: 150px;
+    display: none;
+    z-index: 1;
+}
+
+.header .links ul li{
+    margin-top: 10px;
+    list-style: none;
+    margin-bottom : 10px;
+}
+
+.header .links ul li a{
+    text-decoration: none;
+    font-size: 32px;
+    text-align: center;
+    color: #111111;
+    transition: 0.3S;
+}
+
+.header .links ul li a:hover {
+padding-left: 25px;
+
+}
+
+.header .links ul li:not(:last-child) a {
+    border-bottom : 1px solid #333; 
+}
+
+.header .links:hover ul{
+    display: block;
+    cursor: grab;
+}
+
+/* End Header */
+
+
+/*........................................................................................................................................................................................................*/
+
+
+/* Start Landing section*/
+
+.landing{
+    position: relative;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    height:calc(100vh - 100px);
+    margin-top: 6px;
+}  
+
+.landing .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+
+}
+
+.landing .text h2{
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+.landing .text p{
+    margin-top: 5%;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 500;
+} 
+
+/* End Landing section  */
+
+
+/*........................................................................................................................................................................................................*/
+
+
+/* Start Features */
+
+.features{
+    padding-top:var(--section-padding);
+    padding-bottom:var(--section-padding);
+    background-color: var(--section-color);
+}
+
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    grid-gap: 20px; ;
+}
+
+.features .feat{
+    padding: 20px;
+    text-align: center;
+}
+
+.features .feat svg{
+    color: #10CAB7;
+    font-size: 32px;
+}
+
+.features .feat h3{
+    font-weight: 800;
+    font-size :24px; 
+    margin: 30px 0 30px 0;
+}
+
+.features .feat p{
+    line-height: 1.6;
+    color: #777;
+    font-size: 18px;
+    font-family: 'FontAwesome' , 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* End Features */
+
+
+/*........................................................................................................................................................................................................*/
+
+
+/* Start services */
+
+.services{ 
+    padding-top:var(--section-padding);
+    padding-bottom:var(--section-padding);
+}
+
+.services .services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.services .services-content .srv{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media(max-width : 767px){
+    .services .services-content .srv{
+        text-align: center;
+        flex-direction: column ;
+    }
+}
+
+.services .services-content .srv .shape{
+    padding-right: 16px;
+
+}
+
+.services .services-content .srv svg{
+    color: var(--main-color);
+    flex-basis: 60px;
+    font-size: 36px;
+}
+
+.services .services-content .srv text{
+flex: 1;
+}
+
+.services .services-content .srv .text h3{
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.services .services-content .srv .text p{
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: 'FontAwesome';
+    letter-spacing: 2px;
+    font-weight: 300; 
+}
+
+.services .services-content .serv {
+position: relative;
+}
+
+.services .services-content .serv .srvx {
+    position: absolute;
+    width: 100%;
+    height:100%;
+
+}
+
+.services .services-content .serv  .images{
+position: absolute;
+height: 75%;
+top: 70px;
+right: 60px;
+}
+
+.services .services-content .serv  .images img{
+width: 100%;
+height: 100%;
+}
+
+.services .services-content .serv .srvx::before{
+content:'';
+background-color: var(--secondary-color);
+width: 100px;
+position: absolute;
+top: 75;
+right: 0;
+height:100%;
+}
+
+@media(max-width: 1199px){
+    .img-hidden{
+        display: none;
+    }
+}
+
+/* End services */
+
+
+/*........................................................................................................................................................................................................*/
+
+
+/* Start portfolio  */
+
+.portfolio{ 
+    padding-top:var(--section-padding);
+    padding-bottom:var(--section-padding);
+    background-color: var(--section-color);
+}
+
+.portfolio .portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.portfolio .portfolio-content .card{
+    background-color: white;
+}
+
+.portfolio .portfolio-content .card img{
+    max-width: 100%;
+}
+
+.portfolio .portfolio-content .card .info{
+    padding: 20px;
+}
+
+.portfolio .portfolio-content .card .info h3{
+    font-size: 32px;
+    font-weight: 800;
+    padding-bottom: 12px;
+}
+
+
+.portfolio .portfolio-content .card .info p{
+    font-size: 16PX;
+    font-family: 'FontAwesome', 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    color: #777;
+}
+
+/* End portfolio  */
+
+
+/*........................................................................................................................................................................................................*/
+
+
+/* Start about */
+
+.about{
+    padding-top: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) + 60px); 
+}
+
+.about-content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width : 991px){
+        .about-content{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.about .about-content .image{
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+
+@media (max-width : 991px){
+    .about .about-content .image{
+       margin:  0 auto 60px;
+    }
+
+
+}
+
+.about .about-content .image::before{
+    content: '';
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+
+.about .about-content .image::after{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    z-index: -1;
+    top: -40px;
+    right: -150px;
+}
+
+@media (max-width : 991px){
+    .about .about-content .image::before,
+    .about .about-content .image::after{
+        display: none;
+    }
+}
+
+.about .about-content .image img{
+    max-width: 100%;
+}
+
+.about .about-content .text{
+    flex-basis: calc(100% - 500px);
+}
+
+.about .about-content .text p:first-of-type{
+font-weight: bold;
+margin-bottom: 30px; ;
+line-height: 2;
+letter-spacing: 1px;
+font-family: 'FontAwesome', 'Work Sans', sans-serif;
+}
+
+.about .about-content .text  hr {
+width: 50%;
+border-color: var(--main-color);
+display: inline-block;
+}
+
+.about .about-content .text p:last-of-type{
+    font-weight: bold;
+    margin-top: 30px; ;
+    line-height: 2;
+    letter-spacing: 1px;
+    font-family: 'FontAwesome', 'Work Sans', sans-serif;
+    color: #777;
+
+
+}
+/* End about */
+
+
+/*........................................................................................................................................................................................................*/
+
+
+/* start Contact */
+.contact{
+    padding-top:var(--section-padding);
+    padding-bottom:var(--section-padding);
+    background-color: var(--section-color);
+}
+
+.contact .info{
+    padding-top:var(--section-padding);
+    padding-bottom:var(--section-padding);
+    text-align: center   ;
+}
+
+.contact .info .label{
+    font-size:40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: 'FontAwesome', 'Work Sans', sans-serif;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.contact .info .label span{
+    color: red;
+}
+
+.contact .info .link{
+    display: block;
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.contact .info .social{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size : 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'FontAwesome', 'Work Sans', sans-serif;
+}
+
+.contact .info .social svg{
+    margin-left: 10px;
+    color: red;
+}
+
+@media(max-width : 767px){
+    .contact .info .label,
+    .contact .info .link{
+           font-size: 26px; 
+
+
+    }
+}
+/* End Contact */
+
+
+/*........................................................................................................................................................................................................*/
+
+
+/* start Footer */
+.footer{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.footer span{
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* End Footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*........................................................................................................................................................................................................*/
+           /* Media Query */
+/*........................................................................................................................................................................................................*/
+
+
+/* small */
+@media(min-width : 768px){
+    .container{
+        width: 750px;
+    }}
+    
+    
+    
+    /* Medium */
+    @media(min-width : 992px){
+    .container{
+        width: 970px;
+    }}
+    
+    
+    /* Larg */
+    @media(min-width : 1200px){
+    .container{
+        width: 1170px;
+    }}
